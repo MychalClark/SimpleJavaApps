@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:windowSoftInputMode="adjustPan"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/priceLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/priceLabelText"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:text="Purchase Price" />
+
+            <EditText
+                android:id="@+id/priceInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:text="1999.25'" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="start">
+
+                    <TextView
+                        android:id="@+id/discountLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/discountLabelText"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        tools:text="Discount(%)" />
+
+                    <TextView
+                        android:id="@+id/quantityLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/quantityLabelText"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        tools:text="Quantity" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/discountInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:singleLine="false"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        tools:text="35" />
+
+                    <EditText
+                        android:id="@+id/quantityInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        tools:text="12" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnAddText"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                tools:text="Add Purchase" />
+
+            <TextView
+                android:id="@+id/addError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/addErrorText"
+                android:textAlignment="center"
+                android:textColor="#E30808" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16sp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/salesTaxLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:text="@string/salesTaxLabelText"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="true"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/salesTaxInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textAlignment="viewStart"
+                        android:textSize="11sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/taxError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/taxErrorText"
+                android:textAlignment="center"
+                android:textColor="#E30808" />
+
+            <TextView
+                android:id="@+id/productList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/productList"
+                android:textAlignment="center"
+                tools:text="stuff here" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/labelSubTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/subTotalLabelText"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/saleTaxLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/salesTaxLabelText"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/grandTotalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/grandTotalLabelText"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/subTotal"
+                    android:layout_width="139dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/subTotal"
+                    android:textAlignment="center"
+                    tools:text="number" />
+
+                <TextView
+                    android:id="@+id/saleTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/saleTax"
+                    android:textAlignment="center"
+                    tools:text="number" />
+
+                <TextView
+                    android:id="@+id/grandTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/grandTotal"
+                    android:textAlignment="center"
+                    tools:text="number" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tipSuggestionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/tips" />
+
+                <TextView
+                    android:id="@+id/tenLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_10" />
+
+                <TextView
+                    android:id="@+id/tenPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:textAlignment="center"
+                    tools:text="10000" />
+
+                <TextView
+                    android:id="@+id/twentyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_20" />
+
+                <TextView
+                    android:id="@+id/twentyPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:textAlignment="center"
+                    tools:text="10000" />
+
+                <TextView
+                    android:id="@+id/thirtyLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/_30" />
+
+                <TextView
+                    android:id="@+id/thirtyPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0.00"
+                    android:textAlignment="center"
+                    tools:text="10000" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnCal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:text="@string/btnCalculateCheck" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

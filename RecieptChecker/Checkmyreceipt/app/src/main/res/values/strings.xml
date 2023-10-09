@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Check my receipt</string>
+    <string name="btnAddText">Add Purchase</string>
+    <string name="addErrorText"></string>
+    <string name="quantityLabelText">Quantity</string>
+    <string name="discountLabelText">Discount(%)</string>
+    <string name="priceLabelText">Purchase Price</string>
+    <string name="salesTaxLabelText">Sales Tax(%)</string>
+    <string name="btnTaxText">Update Tax</string>
+    <string name="taxErrorText"></string>
+    <string name="btnCalculateCheck">Calculate Check</string>
+    <string name="productList"></string>
+    <string name="subTotal">SubTotal</string>
+    <string name="subTotalLabelText">SubTotal</string>
+    <string name="saleTax">SaleTax</string>
+
+    <string name="grandTotal">GrandTotal</string>
+    <string name="grandTotalLabelText">GrandTotal</string>
+
+    <string name="_10">10%</string>
+    <string name="tips">Tips</string>
+    <string name="thirtyPercent"></string>
+    <string name="_30">30%</string>
+    <string name="twentyPercent"></string>
+    <string name="_20">20%</string>
+    <string name="tenPercent"></string>
+</resources>
