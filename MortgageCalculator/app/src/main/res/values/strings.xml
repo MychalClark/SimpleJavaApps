@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="textEstimate">0</string>
+    <string name="errorPrincipal">Principal must be 0 - 100000</string>
+    <string name="errorAnnual">Annual Rate must be 1 - 50</string>
+    <string name="errorTerm">Term must be 0 - 30</string>
+    <string name="errorPMI">PMI must be 0 - 2</string>
+    <string name="errorProperty">Property must be 0 - 100000</string>
+    <string name="errorHome">Home Owners must be 0 - 100000</string>
+</resources>
